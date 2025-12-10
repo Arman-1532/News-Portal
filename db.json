@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Abdullah",
+      "email": "abdullah@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Arman",
+      "email": "arman@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Mohammod",
+      "email": "mohammod@gmail.com"
+    }
+  ],
+  "news": [
+    {
+      "id": 2,
+      "title": "City Library Extends Hours During Exam Season",
+      "body": "The central city library announced extended opening hours to support students preparing for exams. Librarians will also hold nightly study groups and provide free access to online research tools.",
+      "author_id": 2,
+      "comments": [
+        {
+          "id": 102,
+          "text": "This is a lifesaver, thank you to the library team.",
+          "user_id": 3,
+          "timestamp": "2025-12-10T15:56:32Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Neighborhood Cafe Hosts Open Mic Night",
+      "body": "A local cafe is hosting an open mic night to showcase emerging musicians and poets. Entry is free and the event encourages creative collaboration across the community.",
+      "author_id": 1,
+      "comments": [
+        {
+          "id": 103,
+          "text": "I will bring my guitar.",
+          "user_id": 2,
+          "timestamp": "2025-12-10T19:45:52Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Local Clinic Offers Free Health Screenings",
+      "body": "A nearby clinic will offer free health screenings for blood pressure, diabetes and general check-ups over the weekend. Appointments recommended but walk-ins welcome.",
+      "author_id": 3,
+      "comments": []
+    }
+  ]
+}

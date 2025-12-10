@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* purple palette requested by user */
+    --color-primary: #673AB7; /* Deep purple */
+    --color-accent: #3F51B5; /* Accent */
+    --color-light-bg: #F5F5F5; /* Light background */
+    --color-card-bg: #FFFFFF; /* Card background */
+    --color-text: #222222; /* Main text */
+    --color-muted: #757575; /* Muted text */
+    --color-border: #E0E0E0;
+
+    background: linear-gradient(180deg, var(--color-light-bg) 0%, #ffffff 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: var(--color-card-bg);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    color: var(--color-primary);
+    font-size: 28px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info span {
+    color: var(--color-muted);
+    font-weight: 500;
+}
+
+.login-card {
+    background: var(--color-card-bg);
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h1 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.login-card h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--color-border);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+.char-count {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-card-bg);
+}
+
+.btn-primary:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(63, 81, 181, 0.12);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.actions {
+    background: var(--color-card-bg);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid var(--color-border);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background: var(--color-card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(27, 27, 27, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.news-card h3 {
+    color: var(--color-text);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.news-card .author {
+    color: var(--color-muted);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.news-card .preview {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.comment-count {
+    color: var(--color-primary);
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.news-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.news-detail {
+    background: var(--color-card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(27, 27, 27, 0.06);
+    margin-bottom: 20px;
+}
+
+.news-detail h2 {
+    color: var(--color-text);
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.news-detail .author {
+    color: var(--color-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.news-body {
+    color: var(--color-text);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.comments-section {
+    background: var(--color-card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(27, 27, 27, 0.06);
+}
+
+.comments-section h3 {
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.comment {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--color-primary);
+}
+
+.comment-author {
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+/* Make the logout button in the header use the primary purple color */
+.header .user-info .btn.btn-secondary {
+    background: var(--color-primary);
+    color: var(--color-card-bg);
+    border-color: var(--color-primary);
+}
+
+.header .user-info .btn.btn-secondary:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.comment-text {
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.comment-form {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid var(--color-border);
+}
+
+.comment-form h4 {
+    color: var(--color-text);
+    margin-bottom: 15px;
+}
+
+.form-container {
+    background: var(--color-card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(27, 27, 27, 0.06);
+}
+
+.form-container h2 {
+    color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+.loading,
+.empty,
+.error {
+    text-align: center;
+    padding: 40px;
+    color: var(--color-muted);
+    font-size: 16px;
+}
+
+.error {
+    color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .news-list {
+        grid-template-columns: 1fr;
+    }
+
+    .news-actions {
+        flex-direction: column;
+    }
+
+    .news-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
